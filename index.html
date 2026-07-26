@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>PEAGS Car Companion</title>
+
+    <!-- Theme / status bar -->
+    <meta name="theme-color" content="#0E0F11" />
+
+    <!-- iOS: Add to Home Screen support -->
+    <link rel="apple-touch-icon" href="/icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="PEAGS" />
+
+    <!-- Android / general PWA -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body style="margin:0; background:#0E0F11;">
+    <div id="root"></div>
+    <!-- Vite replaces %VITE_VAPID_PUBLIC_KEY% with the real value at build time,
+         from the environment variable you set in Vercel. Exposing it this way
+         (rather than via import.meta.env in App.jsx) keeps App.jsx portable so
+         it also works unmodified when previewed as a Claude artifact. -->
+    <script>
+      window.VAPID_PUBLIC_KEY = "%VITE_VAPID_PUBLIC_KEY%";
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
